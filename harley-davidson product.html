@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<title>Harley-Davidson productpage</title>
+		<link rel="stylesheet" href="productpage style.css">
+
+	</head>
+	<body>
+	
+		<div id ="hero">
+			<div class="navbar">
+				<a href="harley-davidson home.html"><img src="image/logo.png" class="logo"></a>
+				<div class="user">
+				<a href="harley-davidson home.html"><button type="button">GO to Home</button></a>
+				<img src="image/user.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="info">
+				<h1>PRODUCTS</h1>
+				<p>
+					We are establishing our position as Harley-Davidson's riding culture hub 
+					by operating stores <br>across the country that can receive Harley-Davidson's global standard service equally.
+				</p>
+				<input type="text" placeholder="Search">
+			</div>
+		</div>
+
+		<div class="slider">
+			<img src="image/left-arrow.png" id="prev">
+			<div class="preview">
+				<img src="image/small1.jpg" class=" active thumbnail">
+				<img src="image/small2.jpg" class="thumbnail">
+				<img src="image/small3.jpg" class="thumbnail">
+				<img src="image/small4.jpg" class="thumbnail">
+				<img src="image/small5.jpg" class="thumbnail">
+			</div>
+			<img src="image/right-arrow.png" id="next">
+		</div>
+
+
+		<div class="container1">
+			<div class="row">
+				<div class="col-1">
+					<h1>HARLEY DAVIDSON LIVEWIRE</h1>
+					<p>할리데이비슨은 전기 모터바이크로 라이더의 감성을 충족시키기 위해 우선 차체의 디자인과 품질에 집중했다. 지금까지의 전기바이크가 미래를 의식하는 장난감 같은 디자인이었다면 라이브와이어는 현재의 모터사이클 분위기를 그대로 담았다.</p>
+					<h2>$29,790</h2>
+					<button class = "button1">시승 예약</button>
+				</div>
+				<div class="col-2">
+					<img src="image/6a6e63a6288ffe98e130fc7f91a86f30_0f5e8d3a8bbd6695.png" >
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container1">
+			<div class="row">
+				<div class="col-2">
+					<img src="image/Softail-Slim-olive-gold.png" >
+				</div>
+
+				<div class="col-1">
+					<h1>HARLEY DAVIDSON SPORTSTER</h1>
+					<p>늘씬한 차체 실루엣을 박력 있게 만드는 전후 타이어와 콤팩트한 피넛 탱크는 포티에잇의 상징성을 그대로 이어간다. 아이언 1200이 블랙 컬러를 적극적으로 채용해 시크한 감각을 강조했다면 포티에잇 스페셜은 크롬 파츠를 활용해 리듬감을 강조했다.</p>
+					<h2>$25,650</h2>
+					<button class = "button1">시승 예약</button>
+				</div>
+				
+			</div>
+		</div>
+
+
+		<div class="container1">
+			<div class="row">
+				<div class="col-1">
+					<h1>HARLEY DAVIDSON ROADKING</h1>
+					<p> 당당한 포지션의 미니에이프행어 핸들바는 각도를 바싹 세워 포지션을 조절하고 싱글시트를 달아 프런트는 높고 리어는 낮게 깔리는 안정적인 실루엣을 연출했다. 차체의 중심이 되는 엔진과 배기는 크롬으로 통일해 존재감을 더하며 바디의 일체감을 더해 존재감을 키웠다. </p>
+					<h2>$30,720</h2>
+					<button class = "button1">시승 예약</button>
+				</div>
+				<div class="col-2">
+					<img src="image/16-hd-cvo-street-glide-bikepaint-c78-01.png" >
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<div>
+				DESIGNED BY
+			</div>
+
+			<div>
+				maker. 박 민 규
+				<br>Addr. 서울특별시 마포구 상암동 월드컵 파크 4단지 아파트 
+				<br>Fax/Tel. 010-2258-7791 
+				<br>COPYRIGHT 2021. MINGYU. ALL RIGHT RESERVED.
+			</div>
+		</footer>
+
+		<script>
+
+			var prev = document.getElementById("prev");
+			var next = document.getElementById("next");
+			var thumbnail = document.getElementsByClassName("thumbnail");
+			var hero = document.getElementById("hero");
+
+			var backgroundImg = new Array(
+			"image/bg1.jpg",
+			"image/bg2.jpg",
+			"image/bg3.jpg",
+			"image/bg4.jpg",
+			"image/bg5.jpg",
+
+			);
+			let i = 0;
+			next.onclick = function() {
+				
+				if(i < 4){
+					hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+					thumbnail[i+1].classList.add("active");
+					thumbnail[i].classList.remove("active");
+					i++;
+				}
+			}
+
+			prev.onclick = function() {
+				if(i > 0){
+					hero.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+					thumbnail[i-1].classList.add("active");
+					thumbnail[i].classList.remove("active");
+					i--;
+				}
+			}
+
+
+		</script>
+
+	</body>
+</html>
