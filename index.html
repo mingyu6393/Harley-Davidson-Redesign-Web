@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <title>Harley-Davidson homepage</title>
+    <link rel="stylesheet" type="text/css" href="style0.css">
+</head>
+<body>
+	<section>
+		<header>
+			<a href="index.html" class="logo">Harley-Davidson</a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li><a href="index.html" style="--i:1;">Home</a></li>
+				<li><a href="harley-davidson product.html" style="--i:2;">PRODUCTS</a></li>
+				<li><a href="harley-davidson more.html" style="--i:3;">MORE</a></li>
+			</ul>
+		</header>
+		<div class="container">
+			<div class="box" style="--i:3;">
+				<div class="imgBx">
+					<img src="image/img1.jpg">
+				</div>
+			</div>
+			<div class="box" style="--i:4;">
+				<div class="imgBx">
+					<img src="image/img2.jpg">
+				</div>
+			</div>
+			<div class="box" style="--i:5;">
+				<div class="imgBx">
+					<img src="image/img3.jpg">
+				</div>
+			</div>
+			<div class="box" style="--i:6;">
+				<div class="imgBx">
+					<img src="image/img4.jpg">
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="sci">
+				<li><a href="https://www.facebook.com/harley-davidson" style="--i:9">Facebook</a></li>
+				<li><a href="https://twitter.com/harleydavidson" style="--i:8">Twitter</a></li>
+				<li><a href="https://www.instagram.com/harleydavidson/" style="--i:7">Instagram</a></li>
+			</ul>
+			<p class="copyrightText">©DESIGNED BY MINGYU. 2021</p>
+		</div>
+	</section>
+	<script>
+		let imgBx = document.querySelectorAll('.imgBx');
+		imgBx.forEach(popup => popup.addEventListener('click', () =>{
+			popup.classList.toggle('active')
+		}))
+
+		function toggleMenu(){
+	      var menuToggle = document.querySelector('.toggle');
+	      var navigation = document.querySelector('.navigation');
+	      menuToggle.classList.toggle('active');
+	      navigation.classList.toggle('active');
+	    }
+	</script>
+</body>
+</html>
+
